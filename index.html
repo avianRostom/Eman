@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffd6e7">
+<title>محمد ❤ إيمان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--p2:#ffd6e7;--p3:#ff9ec4;--p4:#f06292;--p5:#c2185b;--deep:#7a1040}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{background:linear-gradient(160deg,#fff6fa 0%,#ffe3ef 45%,#ffc7dd 100%) fixed;color:var(--deep);font-family:'Amiri',serif;-webkit-tap-highlight-color:transparent}
+#fx{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+#bar{position:fixed;top:0;right:0;height:4px;width:0;background:linear-gradient(90deg,var(--p3),var(--p5));z-index:5}
+main{position:relative;z-index:1;width:100%;max-width:620px;margin:0 auto;padding:0 16px 16vh}
+
+.hero{position:relative;overflow:hidden;width:100%;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.blob{position:absolute;border-radius:50%;filter:blur(45px);opacity:.55;z-index:-1;animation:float 9s ease-in-out infinite}
+.b1{width:200px;height:200px;background:#ff9ec4;top:18%;right:0}
+.b2{width:170px;height:170px;background:#ffc1d9;bottom:20%;left:0;animation-delay:-4s}
+.names{font-family:'Aref Ruqaa',serif;font-size:clamp(50px,15vw,96px);line-height:1.2;display:flex;flex-direction:column;align-items:center}
+.grad{background:linear-gradient(90deg,var(--p5),var(--p4),var(--p3),var(--p4),var(--p5));background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:rise 1.4s ease forwards,shine 5s linear infinite}
+.n2{animation-delay:1.3s,0s}
+.heart{display:inline-block;color:var(--p4);font-size:.65em;opacity:0;filter:drop-shadow(0 6px 14px rgba(240,98,146,.55));animation:rise 1s .7s forwards,beat 1.3s 1.7s ease-in-out infinite}
+.hint{margin-top:46px;font-size:17px;color:var(--p5);opacity:0;animation:rise 1s 2.6s forwards}
+.hint span{display:block;font-size:24px;animation:bob 1.6s ease-in-out infinite}
+
+.title{font-family:'Aref Ruqaa',serif;text-align:center;font-size:clamp(46px,13vw,70px);color:var(--p5);margin-top:4vh}
+.orn{text-align:center;color:var(--p4);letter-spacing:8px;margin:4px 0 7vh}
+
+.verse{position:relative;width:100%;background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(240,98,146,.28);border-radius:24px;padding:26px 16px 20px;margin-bottom:30px;box-shadow:0 12px 32px rgba(194,24,91,.12);opacity:0;transform:translateY(45px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.verse.show{opacity:1;transform:none}
+.num{position:absolute;top:-15px;left:0;right:0;margin:0 auto;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--p3),var(--p4));color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(240,98,146,.4)}
+.h{display:block;font-size:clamp(20px,5.4vw,27px);line-height:1.9}
+.h1{text-align:right}
+.h2{text-align:left;color:var(--p5)}
+.sep{display:block;text-align:center;color:var(--p3);font-size:14px;line-height:1;margin:2px 0}
+.w{display:inline-block;opacity:0;transform:translateY(14px);filter:blur(5px);transition:opacity .6s ease,transform .6s ease,filter .6s ease}
+.verse.show .w{opacity:1;transform:none;filter:none}
+.name{color:var(--p4);font-weight:700;animation:glow 2.4s ease-in-out infinite}
+
+.end{text-align:center;margin-top:10vh;opacity:0;transform:scale(.85);transition:all 1.4s ease}
+.end.show{opacity:1;transform:none}
+.end .love{font-family:'Aref Ruqaa',serif;font-size:clamp(38px,11vw,60px);color:var(--p5)}
+.end .heart{opacity:1;font-size:64px;animation:beat 1.3s ease-in-out infinite;margin:10px 0}
+.end .sign{font-size:22px;color:var(--p4)}
+
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:250% center}}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.15)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,20px)}}
+@keyframes glow{0%,100%{text-shadow:0 0 4px rgba(240,98,146,.3)}50%{text-shadow:0 0 16px rgba(240,98,146,.9)}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<canvas id="fx"></canvas>
+<main>
+  <section class="hero">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="names">
+      <span class="grad">محمد</span>
+      <span class="heart">❤</span>
+      <span class="grad n2">إيمان</span>
+    </div>
+    <div class="hint">انزلي للأسفل… كُتب هذا لكِ<span>⌄</span></div>
+  </section>
+
+  <h1 class="title">إيمان</h1>
+  <div class="orn">❀ ❤ ❀</div>
+
+  <div class="verse"><span class="h h1">عَيْنَاكِ بُنٌّ دَافِئٌ يَا حُلْوَتِي</span><span class="h h2">وَأَنَا الَّذِي أَدْمَنْتُ طَعْمَ جَنَاكِ</span></div>
+  <div class="verse"><span class="h h1">أَبْحَرْتُ فِي عَيْنَيْكِ دُونَ سَفِينَةٍ</span><span class="h h2">فَوَجَدْتُ شَطِّي آمِناً بِحِمَاكِ</span></div>
+  <div class="verse"><span class="h h1">إِيمَانُ يَا إِيمَانَ قَلْبِي كُلَّهُ</span><span class="h h2">مَنْ ذَا يَلُومُ القَلْبَ حِينَ هَوَاكِ</span></div>
+  <div class="verse"><span class="h h1">يَا حُلْوَةَ العَيْنَيْنِ رِفْقاً بِالفَتَى</span><span class="h h2">فَالقَلْبُ يَحْيَا مِنْ نَدَى لُقْيَاكِ</span></div>
+  <div class="verse"><span class="h h1">لَا تَقْطَعِي شَعْراً كَلَيْلٍ سَاحِرٍ</span><span class="h h2">فَأَنَا أَنَامُ عَلَى ظِلَالِ دُجَاكِ</span></div>
+  <div class="verse"><span class="h h1">إِنْ قُصَّ شَعْرُكِ قُصَّ قَلْبِي مِثْلَهُ</span><span class="h h2">فَدَعِي الحَرِيرَ يَطُولُ فَوْقَ خُطَاكِ</span></div>
+  <div class="verse"><span class="h h1">وَإِذَا ضَحِكْتِ تَفَتَّحَتْ كُلُّ الرُّبَى</span><span class="h h2">وَمَشَى الرَّبِيعُ مُعَطَّراً بِشَذَاكِ</span></div>
+  <div class="verse"><span class="h h1">أَنْتِ المَلَاذُ إِذَا الهُمُومُ تَكَاثَرَتْ</span><span class="h h2">وَظَلَامُ لَيْلِي يَنْجَلِي بِسَنَاكِ</span></div>
+  <div class="verse"><span class="h h1">لَوْ جَمَّعُوا كُلَّ الحِسَانِ بِمَوْكِبٍ</span><span class="h h2">مَا اخْتَارَ قَلْبِي غَيْرَ نُورِ بَهَاكِ</span></div>
+  <div class="verse"><span class="h h1">هَذَا فُؤَادِي بَيْنَ كَفَّيْكِ ارْتَمَى</span><span class="h h2">فَتَرَفَّقِي، هُوَ لَمْ يَعِشْ لِسِوَاكِ</span></div>
+
+  <div class="end">
+    <div class="love">أُحِبُّكِ يَا إِيمَان</div>
+    <div class="heart">❤</div>
+    <div class="sign">— محمد</div>
+  </div>
+</main>
+
+<script>
+const nums=['١','٢','٣','٤','٥','٦','٧','٨','٩','١٠'];
+document.querySelectorAll('.verse').forEach((v,i)=>{
+  let d=.35;
+  v.querySelectorAll('.h').forEach((h,j)=>{
+    const ws=h.textContent.trim().split(/\s+/);
+    h.innerHTML=ws.map(w=>{const s='<span class="w'+(w.includes('إِيمَان')?' name':'')+'" style="transition-delay:'+d.toFixed(2)+'s">'+w+'</span>';d+=.13;return s}).join(' ');
+    d+=.25;
+    if(j===0)h.insertAdjacentHTML('afterend','<span class="sep">❀</span>');
+  });
+  v.insertAdjacentHTML('afterbegin','<span class="num">'+nums[i]+'</span>');
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('.verse,.end').forEach(el=>io.observe(el));
+
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;bar.style.width=(m>0?scrollY/m*100:0)+'%'},{passive:true});
+
+const c=document.getElementById('fx'),x=c.getContext('2d');
+const dpr=Math.min(devicePixelRatio||1,2);let W,H,P=[];
+const cols=['#f06292','#ff9ec4','#ffb6d1','#e91e63','#ffc1d9'];
+function rs(){W=document.documentElement.clientWidth;H=document.documentElement.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+function draw(p){x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=Math.max(p.a,0);x.fillStyle=p.c;x.beginPath();
+ if(p.t==='p'){x.ellipse(0,0,7*p.s/2,3.5*p.s/2,0,0,Math.PI*2)}
+ else{x.scale(p.s,p.s);x.moveTo(0,-3);x.bezierCurveTo(0,-6,-5,-6,-5,-2.5);x.bezierCurveTo(-5,.5,-2,2.5,0,5);x.bezierCurveTo(2,2.5,5,.5,5,-2.5);x.bezierCurveTo(5,-6,0,-6,0,-3)}
+ x.fill();x.restore()}
+function amb(y){const pet=Math.random()<.6;return{t:pet?'p':'h',x:Math.random()*W,y:y??(pet?-20:H+20),vy:pet?(.4+Math.random()*.7):-(.3+Math.random()*.5),s:1.4+Math.random()*2.4,r:Math.random()*6,vr:(Math.random()-.5)*.03,a:.35+Math.random()*.45,c:cols[Math.random()*5|0],ph:Math.random()*6,amb:1}}
+for(let i=0;i<34;i++)P.push(amb(Math.random()*H));
+addEventListener('pointerdown',e=>{for(let i=0;i<18;i++){const g=Math.random()*Math.PI*2,sp=1.5+Math.random()*3.5;
+ P.push({t:'h',x:e.clientX,y:e.clientY,vx:Math.cos(g)*sp,vy:Math.sin(g)*sp-1.5,s:1.6+Math.random()*2.2,r:(Math.random()-.5),vr:0,a:1,c:cols[Math.random()*5|0],amb:0})}});
+(function loop(){x.clearRect(0,0,W,H);
+ for(let i=P.length-1;i>=0;i--){const p=P[i];
+  if(p.amb){p.ph+=.02;p.x+=Math.sin(p.ph)*.6;p.y+=p.vy;p.r+=p.vr;if(p.y>H+30||p.y<-30)P[i]=amb()}
+  else{p.x+=p.vx;p.y+=p.vy;p.vy+=.05;p.vx*=.98;p.a-=.012;if(p.a<=0){P.splice(i,1);continue}}
+  draw(p)}
+ requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>
